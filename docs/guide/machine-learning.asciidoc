@@ -129,7 +129,7 @@ directory of the cloned model to install it:
 ----
 eland_import_hub_model \
       --url 'XXXX' \
-      --hub-model-id /PATH/TO/MODEL \
+      --hub-model-id /PATH/TO/MODELS/ \
       --task-type ner \
       --es-username elastic --es-password XXX \
       --es-model-id bert-base-ner
@@ -143,7 +143,7 @@ the model directory, so the container can read the files:
 docker run --mount type=bind,source=/PATH/TO/MODELS,destination=/models,readonly -it --rm docker.elastic.co/eland/eland \
     eland_import_hub_model \
       --url 'XXXX' \
-      --hub-model-id /models/bert-base-NER \
+      --hub-model-id /models/
       --task-type ner \
       --es-username elastic --es-password XXX \
       --es-model-id bert-base-ner
